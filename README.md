@@ -1,6 +1,6 @@
-# 🐾 PetAgenda
+# 🐾 PetCare
 
-**PetAgenda** es una aplicación web para registrar y gestionar información de mascotas, como datos generales, historial de vacunas y documentos.
+**PetCare** es una aplicación web para registrar y gestionar información de mascotas, como datos generales, historial de vacunas y documentos.
 
 ## 🚀 Despliegue
 
