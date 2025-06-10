@@ -1,12 +1,10 @@
 # 🐾 PetAgenda
 
-**PetAgenda** es una aplicación web para registrar y gestionar información de mascotas, como datos generales, historial de vacunas y documentos, utilizando tecnologías web puras y PocketBase como backend.
+**PetAgenda** es una aplicación web para registrar y gestionar información de mascotas, como datos generales, historial de vacunas y documentos.
 
 ## 🚀 Despliegue
 
 🔗 [https://tuusuario.github.io/PetAgenda/](https://tuusuario.github.io/PetAgenda/)
-
-> Reemplaza con tu URL real de GitHub Pages.
 
 ## 🛠 Tecnologías
 
@@ -31,8 +29,8 @@ PetAgenda/
 1. **Clona el repositorio:**
 
 ```bash
-git clone https://github.com/tuusuario/PetAgenda.git
-cd PetAgenda
+git clone https://github.com/WilliamRincon27/William_Rincon_proyecto_web
+cd William_Rincon_proyecto_web
 ```
 
 2. **Inicia PocketBase:**
