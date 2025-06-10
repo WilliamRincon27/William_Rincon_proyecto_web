@@ -6,8 +6,10 @@ window.addEventListener('DOMContentLoaded', () => {
     if (pb.authStore.isValid) {
         const loginInfo = document.getElementById('login-form') || document.getElementById('login-info');
         if (loginInfo) loginInfo.style.display = 'none';
-        const navLinks = document.getElementById('nav-links');
-        if (navLinks) navLinks.style.display = 'block';
+        const petForm = document.getElementById('petForm');
+        if (petForm) petForm.style.display = 'block';
+        const logoutbtn = document.getElementById('logout-btn');
+        if (logoutbtn) logoutbtn.style.display = 'block';
         const mainContent = document.getElementById('main-content');
         if (mainContent) mainContent.style.display = 'flex';
         loadPets();
@@ -25,6 +27,7 @@ async function handleLogin() {
         document.getElementById('nav-links').style.display = 'block';
         document.getElementById('main-content').style.display = 'flex';
         loadPets();
+        window.location.reload();
     } catch (error) {
         alert('Error al iniciar sesión');
         console.error(error);
@@ -201,3 +204,9 @@ async function addVaccine(petId) {
     alert('No se pudo guardar la vacuna');
   }
 }
+
+function logout() {
+  pb.authStore.clear(); // Cierra la sesión
+  location.reload();    // Recarga la página
+}
+
