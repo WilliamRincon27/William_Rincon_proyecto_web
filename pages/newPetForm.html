@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetCare</title>
+  <script src="../scripts/pocketbase.umd.js"></script>
+
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body onload="loadPetDetails(), loadVaccinationHistory()">
+  <header>
+    <h1>Pet Profile</h1>
+    <div id="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-newPet">
+      <section class="pet-info">
+        <div class="div-img">
+          <img id="preview-img" src="../assets/dog.jpg" alt="mascota-img" />
+          <div class="file-upload">
+            <input type="file" id="pet-photo" accept="image/*" hidden>
+            <label for="pet-photo" class="upload-btn">Subir imagen</label>
+          </div>
+        </div>
+        <div class="div-form">
+          <form class="pet-form" id="create-pet" onsubmit="event.preventDefault(); handleCreatePet();">
+
+            <div>
+              <label for="petName"><strong>Pet Name</strong></label><br>
+              <input type="text" id="petName" name="petName" placeholder="Max" /><br>
+
+              <label for="breed"><strong>Breed</strong></label><br>
+              <input type="text" id="breed" name="breed" placeholder="Golden Retriever" /><br>
+            </div>
+
+            <div>
+              <label for="petSpecies"><strong>Type</strong></label><br>
+              <select id="petSpecies" name="petSpecies">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="other">Other</option>
+              </select><br>
+
+              <label for="petSex"><strong>Sex</strong></label><br>
+              <select id="petSex" name="petSex">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+              </select>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+      <section class="vaccination-record">
+        <h3>Vaccination Records</h3>
+        <div id="uploadBox">
+          <p>Upload your pet's vaccination card</p>
+          <div class="file-upload">
+            <input type="file" id="vac-record" hidden>
+            <label for="vac-record" class="upload-btn">Subir imagen</label>
+          </div>
+          <div id="downloadLink"></div>
+        </div>
+      </section>
+
+      <section class="vaccination-history">
+        <h3>Vaccination History</h3>
+        <table id="vaccinationTable">
+          <thead>
+            <tr>
+              <th>Pet</th>
+              <th>Vaccine</th>
+              <th>Date</th>
+              <th></th> <!-- columna para el botón guardar -->
+            </tr>
+          </thead>
+          <tbody id="vaccinationBody">
+            <!-- Las vacunas se cargarán aquí -->
+          </tbody>
+        </table>
+      </section>
+
+
+      <button class="save-btn" type="submit" onclick="handleCreatePet()">Save</button>
+    </div>
+  </main>
+  <footer>
+    <img src="../assets/IngSistemas.png" alt="Ingeniria de sistemas" style="height:40px;">
+    <span>William Rincon Julio | 1152053 | Ingeniería de Sistemas</span>
+    <img src="../assets/UFPS_Logo.png" alt="UFPS" style="height:40px;">
+  </footer>
+  <script src="../scripts/main.js"></script>
+</body>
+
+</html>
